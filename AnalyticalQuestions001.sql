@@ -263,3 +263,55 @@ FROM
 WHERE
     (department = 'HR' OR department = 'Admin')
     AND salary > 80000;
+
+
+
+
+
+/* MYSQL - Usuários com números de telefone ausente - Linkedin/Airbnb/Meta
+
+A equipe de produtos está lançando um novo recurso de notificação do WhatsApp e precisa identificar usuários que ainda não forneceram seus números de telefone.
+
+Esses usuários receberão um prompt para adicionar suas informações de contato.
+
+Encontre todos os usuários que não forneceram um número de telefone.
+
+Retorne o user_id e name.
+
+*/
+
+SELECT
+    user_id,
+    user_name
+FROM
+    fintech_app_users
+WHERE
+    phone_number IS NULL;
+
+
+
+
+
+/* MYSQL - Contagem de eventos do usuário do MacBookPro - Apple
+
+Conte o número de eventos de usuário realizados por usuários do MacBookPro.
+
+Produza o resultado junto com o nome do evento.
+
+Classifique o resultado com base na contagem de eventos em ordem decrescente.
+
+*/
+
+SELECT
+    event_name,
+    COUNT(event_name) qtd
+FROM
+    playbook_events 
+WHERE
+    device = 'macbook pro'
+GROUP BY
+    event_name
+ORDER BY 
+    qtd DESC;
+
+
