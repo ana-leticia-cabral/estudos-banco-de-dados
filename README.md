@@ -1,2 +1,4 @@
+<<<<<<< HEAD
 # Banco de dados e SQL
- Repositório dedicado aos meus estudos de Banco de dados.
+ Repositório dedicado aos meus estudos de Banco de dados.=========
+>>>>>>> mysql-basico/main
